@@ -5,7 +5,7 @@ import axios from 'axios'
 import Pgination from './Pgination'
 function Movies({fun,remove,data}) {
   const[movie,setmovie]=useState([])
- 
+  console.log(movie);
   const[page,setpage]=useState(1)
 
   const moveback=()=>{
@@ -22,6 +22,7 @@ function Movies({fun,remove,data}) {
   
   useEffect(()=>{
   const API_KEY = import.meta.env.VITE_TMDB_KEY;
+
   axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`).then((res)=>{
     console.log('Fetched movies:', res.data.results); 
   setmovie(res.data.results)
@@ -34,7 +35,6 @@ function Movies({fun,remove,data}) {
      </div>
      <div className="flex flex-row flex-wrap justify-around m-5">
       {movie.map((m)=>
-   
       <Card key={m.id} poster_path={m.poster_path} moviename={m.original_title} mov={m} myfunction={fun} myremovefun={remove} movielist={data}/>)
       }
      

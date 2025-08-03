@@ -3,7 +3,7 @@ import React from 'react'
 function Banner({bannerimg}) {
   return (
     <div className="relative md:h-[80vh]">
-      <div className="sm:h-[40vh] w-full sm:bg-contain  sm:flex-col md:h-[80vh] sm:w-full flex flex-row opacity-80 -z-1 bg-center overflow-hidden bg-black"
+      <div className="sm:h-[40vh] w-full sm:bg-cover  sm:flex-col md:h-[80vh] sm:w-full flex flex-row opacity-80 -z-1 bg-center overflow-hidden bg-black"
      style={{backgroundImage:`url(https://image.tmdb.org/t/p/original/${bannerimg.poster_path}`,backgroundRepeat:"no-repeat",
       backgroundSize:"cover",backgroundPosition:"0% 25%",backgroundFit:"cover"
          }}>

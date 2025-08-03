@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Card({mov,poster_path,moviename,myfunction,myremovefun,movielist}) {
+  //console.log("card is called");
   let contain=(mov)=>{
       for(let i of movielist){
        if(i.id==mov.id){

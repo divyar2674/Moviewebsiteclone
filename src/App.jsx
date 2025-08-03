@@ -33,7 +33,8 @@ function App(){
     setwatchlist(newwatchlist)
     console.log(newwatchlist)
   }
-   console.log("API KEY:", import.meta.env.VITE_TMDB_KEY)
+ //  console.log("API KEY:", import.meta.env.VITE_TMDB_KEY)
+
   let[banner,setbanner]=useState({})
   useEffect(()=>{
   
@@ -60,6 +61,7 @@ function App(){
     localStorage.setItem('moviestorage',JSON.stringify(filteredlist))
     setwatchlist(filteredlist)
   }
+     //to get movies list
 
     //to store watchlists arrray of objects in local storage
     useEffect(()=>{
